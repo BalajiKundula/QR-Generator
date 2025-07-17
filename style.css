@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(138, 163, 181);
+}
+.container {
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+.container:hover {
+    transform: translate(-50%, -52%);
+    border-color: rgb(2, 56, 69);
+    box-shadow: 0 12px 24px rgba(2, 56, 69, 0.2);
+}
+.container p{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.container p:hover {
+    color: rgb(2, 56, 69);
+    cursor: default;
+    transition: 0.3s;
+}
+.container input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(66, 90, 96);
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+}
+.container input:hover {
+    border: 2px solid rgb(2, 56, 69);
+    transition: 0.1s ease;
+}
+
+.container input:focus {
+    border: 2px solid rgb(2, 56, 69);
+    outline: none;
+}
+
+.container button{
+    width: 100%;
+    height: 50px;
+    background: rgb(2, 56, 69);
+    color: #fff;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    margin: 20px 0;
+    font-weight: 500;
+}
+.container button:hover {
+    background: rgb(230, 242, 245);
+    color: rgb(2, 56, 69);
+    border: 2px solid rgb(2, 56, 69);
+    box-shadow: 0 8px 16px rgba(81, 103, 109, 0.4);
+    transform: translateY(-3px);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+#imgBox{
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+#imgBox img{
+    width: 100%;
+    padding: 10px;
+}
+#imgBox.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #336d91;
+}
+.error{
+    animation: shake 0.1s linear 10;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
