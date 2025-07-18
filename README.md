@@ -1,0 +1,1 @@
+https://getqrgenerator.vercel.app/
